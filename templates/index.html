@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Orçamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestão de Orçamentos</h1>
+        </header>
+
+        <i id="mode_icon" class="fa-solid fa-moon"></i>
+
+        <!-- Formulário para criar orçamento -->
+        <section>
+            <label for="descricao-orcamento">Descrição do Orçamento:</label>
+            <input type="text" id="descricao-orcamento" placeholder="Digite a descrição do orçamento">
+            <button id="criar-orcamento">Criar Orçamento</button>
+        </section>
+
+        <!-- Lista de orçamentos criados -->
+        <section>
+            <h2>Orçamentos Criados</h2>
+            <ul id="lista-orcamentos"></ul>
+        </section>
+
+        <hr>
+
+        <!-- Visualização de itens de um orçamento -->
+        <section>
+            <h2>Itens do Orçamento: <span id="nome-orcamento">Nenhum</span></h2>
+
+            <div>
+                <label for="descricao-item">Descrição do Item:</label>
+                <br>
+                <input type="text" id="descricao-item" placeholder="Descrição do item">
+                <br>
+                <label for="valor-item">Valor:</label>
+                <br>
+                <input type="number" id="valor-item" placeholder="Valor do item">
+                <br>
+                <label for="fornecedor-item">Fornecedor:</label>
+                <br>
+                <input type="text" id="fornecedor-item" placeholder="Fornecedor do item">
+                <label for="foto-item">Foto:</label>
+                <input type="file" id="foto-item">
+                <button id="adicionar-item">Adicionar Item</button>
+            </div>
+
+            <h3>Itens Adicionados:</h3>
+            <ul id="lista-itens"></ul>
+
+            <p>Total: R$ <span id="total-itens">0.00</span></p>
+
+            <!-- Exclusão do orçamento -->
+            <button id="excluir-orcamento" style="display:none;">Excluir Orçamento</button>
+        </section>
+
+        <hr>
+
+        <!-- Backup e Restauração -->
+        <section>
+            <button id="gerar-backup">Gerar Backup (JSON)</button>
+            <input type="file" id="restaurar-backup" accept=".json">
+            <button id="restaurar-backup-btn">Restaurar Backup</button>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

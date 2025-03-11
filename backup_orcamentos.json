@@ -1,0 +1,15 @@
+[
+  {
+    "descricao": "Teste 1",
+    "itens": [
+      {
+        "descricao": "Item_Test1",
+        "fornecedor": "Manufactor_Test1",
+        "foto": null,
+        "id": 4,
+        "orcamento_id": 2,
+        "valor": 100
+      }
+    ]
+  }
+]
