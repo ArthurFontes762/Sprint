@@ -6,8 +6,8 @@
     --color-light-50: #f2f2f2;
 
     /* Dark */
-    --color-dark-50: #797984;
-    --color-dark-100: #393e46;
+    --color-dark-50: #393e46;
+    --color-dark-100: #222831;
 
     /* Gradient */
     --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
@@ -82,7 +82,7 @@ button {
 button {
     border-radius: 5px;
     background-color: #f96d00;
-    color: white;
+    color: #f2f2f2;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -151,7 +151,7 @@ section:nth-of-type(3) {
 
 section:nth-of-type(3) button {
     background-color: #f96d00;
-    color: white;
+    color: #f2f2f2;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;

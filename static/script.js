@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 orcamentoAtual = data.orcamento;
                 nomeOrcamentoSpan.textContent = orcamentoAtual.descricao;
-                nomeOrcamentoSpan.style.color = '#007bff'; // Destaque para o orçamento carregado
+                nomeOrcamentoSpan.style.color = '#f96d00'; // Destaque para o orçamento carregado
                 atualizarListaItens(data.itens);
 
                 // Verifica se o orçamento pode ser excluído
